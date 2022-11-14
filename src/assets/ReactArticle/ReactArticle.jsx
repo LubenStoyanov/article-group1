@@ -3,6 +3,8 @@ import './ReactArticle.css';
 import { Fade } from "react-slideshow-image";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import Main from './Main';
+import Carousel from './Carousel';
 
 const ReactArticle = () => {
   const fadeImages = [
@@ -14,6 +16,7 @@ const ReactArticle = () => {
     "https://crowdbotics.ghost.io/content/images/2021/05/React-Native-Img.png"
   ];
   return (
+    <>
     <div className='headerSec'>
       
     <Fade className='images'>
@@ -25,6 +28,9 @@ const ReactArticle = () => {
         <img src={fadeImages[0]} />
     </Fade>
     </div>
+    <Main />
+    <Carousel />
+    </>
 
 
   )
