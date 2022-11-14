@@ -1,13 +1,14 @@
-import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Nizami from "./components/Nizami";
 import Kingsley from "./components/Kingsley";
-import Tobias from "./components/Tobias";
-import Bruno from "./components/Bruno";
-import Luben from "./components/Luben";
+import WordPress from "./routes/WordPress";
+import MongoDB from "./routes/MongoDB";
+import Express from "./routes/Express";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -19,20 +20,20 @@ const router = createBrowserRouter([
     element: <Nizami />,
   },
   {
-    path: "/bruno",
-    element: <Bruno />,
+    path: "/mongodb",
+    element: <MongoDB />,
   },
   {
     path: "/kingsley",
     element: <Kingsley />,
   },
   {
-    path: "/tobias",
-    element: <Tobias />,
+    path: "/wordpress",
+    element: <WordPress />,
   },
   {
-    path: "/luben",
-    element: <Luben />,
+    path: "/express",
+    element: <Express />,
   },
 ]);
 

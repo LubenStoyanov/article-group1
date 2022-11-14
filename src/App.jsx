@@ -1,4 +1,3 @@
-
 import {
   Box,
   Button,
@@ -73,16 +72,16 @@ function App() {
                 <Article title={"Kingsley"} />
               </WrapItem>
               <WrapItem>
-                <Article title={""} />
+                <Article title={"MongoDB"} />
+              </WrapItem>
+              <WrapItem>
+                <Article title={"WordPress"} />
               </WrapItem>
               <WrapItem>
                 <Article title={""} />
               </WrapItem>
               <WrapItem>
-                <Article title={""} />
-              </WrapItem>
-              <WrapItem>
-                <Article title={"Luben"} />
+                <Article title={"Express"} />
               </WrapItem>
             </Wrap>
           )}
