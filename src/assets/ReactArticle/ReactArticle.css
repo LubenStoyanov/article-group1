@@ -1,11 +1,10 @@
-#root {
+/* #root {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-}
+} */
 
-
-:root {
+/* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -20,26 +19,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
-h1 {
+/* h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -74,140 +73,140 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+.headerSec {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  color: white;
+  background-color: #d3d0a9;
+  opacity: 0.9;
 }
 
-
-
-.headerSec{
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    color: white;
-    background-color: #d3d0a9;
-    opacity: 0.9;
-  }
-
-  
-  .headerSec h1 {
+.headerSec h1 {
   margin: 0%;
   font-size: 100px;
-  background-color: rgba(rgb(87, 65, 65), rgb(29, 35, 29), rgb(34, 34, 45), alpha, 0.1);
-  }
-  
-  .headerSec img {
+  background-color: rgba(
+    rgb(87, 65, 65),
+    rgb(29, 35, 29),
+    rgb(34, 34, 45),
+    alpha,
+    0.1
+  );
+}
+
+.headerSec img {
   background-repeat: repeat;
   background-size: contain;
   width: 100%;
   object-fit: cover;
-  height: 400px;;
-  }
-  
-  
-  /* /HEADER */
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 15s linear;
-    }
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  footer {
-    width: 60%;
-    margin: auto;
-  }
+  height: 400px;
+}
 
+/* /HEADER */
 
-  .everyContainer {
-    width: 46%;
-    height: 300px;
-    border-radius: 15px;
-    margin-right: 5px;
-    margin-bottom: 40px;
-    background-color: #282c34;
-    padding: 15px;
-    text-align: left;
-    text-overflow: ellipsis;
-    overflow: scroll;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
   }
-  .everyContainer p {
-    height: 40%;
-  }
+}
 
-  .containers {
-    display: flex;
-    width: 85%;
-    justify-content: space-between;
-    margin-left: 10%;
-    flex-wrap: wrap;
-  }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-  .everyContainer:hover{
-    scale: 1.01;
-    transition: 0.3s;
-    border: 2px solid white;
-    background-color: rgb(15, 14, 14);
-  }
+.App-link {
+  color: #61dafb;
+}
 
-  .everyContainer:hover .stepsimage img{
-visibility: visible;
-transition: 0;
-background-color: transparent;
-padding-top: 15px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .everyContainer:hover h3 {
-    font-size: larger;
-    transition: 0.3s;
-    color: rgb(82, 82, 218);
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  .everyContainer:hover h2 {
-    transition: 0.9s;
-    color: rgb(70, 147, 8);
-  }
+footer {
+  width: 60%;
+  margin: auto;
+}
 
-  .everyContainer img {
-    width: 10%;
-    height: 15%;
-  }
+.everyContainer {
+  width: 46%;
+  height: 300px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 40px;
+  background-color: #282c34;
+  padding: 15px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: scroll;
+}
+.everyContainer p {
+  height: 40%;
+}
 
-  .stepsimage {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
+.containers {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin-left: 10%;
+  flex-wrap: wrap;
+}
 
-  .stepsimage img {
-padding-left: 20px;
-visibility: hidden;
-  }
+.everyContainer:hover {
+  scale: 1.01;
+  transition: 0.3s;
+  border: 2px solid white;
+  background-color: rgb(15, 14, 14);
+}
 
-  .gallery {
+.everyContainer:hover .stepsimage img {
+  visibility: visible;
+  transition: 0;
+  background-color: transparent;
+  padding-top: 15px;
+}
+
+.everyContainer:hover h3 {
+  font-size: larger;
+  transition: 0.3s;
+  color: rgb(82, 82, 218);
+}
+
+.everyContainer:hover h2 {
+  transition: 0.9s;
+  color: rgb(70, 147, 8);
+}
+
+.everyContainer img {
+  width: 10%;
+  height: 15%;
+}
+
+.stepsimage {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.stepsimage img {
+  padding-left: 20px;
+  visibility: hidden;
+}
+
+.gallery {
   --d: 15s;
   display: grid;
   width: 220px;
@@ -230,37 +229,39 @@ visibility: hidden;
 }
 
 .gallery > img:nth-child(1) {
-  animation-delay: calc(0*var(--d));
+  animation-delay: calc(0 * var(--d));
   --r: -4deg;
 }
 
 .gallery > img:nth-child(2) {
-  animation-delay: calc(-0.2*var(--d));
+  animation-delay: calc(-0.2 * var(--d));
   --r: 2deg;
 }
 
 .gallery > img:nth-child(3) {
-  animation-delay: calc(-0.4*var(--d));
+  animation-delay: calc(-0.4 * var(--d));
   --r: 20deg;
 }
 
 .gallery > img:nth-child(4) {
-  animation-delay: calc(-0.6*var(--d));
+  animation-delay: calc(-0.6 * var(--d));
   --r: -13deg;
 }
 
 .gallery > img:nth-child(5) {
-  animation-delay: calc(-0.8*var(--d));
+  animation-delay: calc(-0.8 * var(--d));
   --r: 8deg;
 }
 
 .gallery > img:nth-child(6) {
-  animation-delay: calc(-1*var(--d));
+  animation-delay: calc(-1 * var(--d));
   --r: 8deg;
 }
 
 @keyframes slide {
-  0%, 100%, 80.01% {
+  0%,
+  100%,
+  80.01% {
     transform: translateX(0%) rotate(var(--r));
     z-index: 3;
   }
@@ -272,13 +273,16 @@ visibility: hidden;
     transform: translateX(-120%) rotate(var(--r));
     z-index: -3;
   }
-  20%, 80% {
+  20%,
+  80% {
     transform: translateX(0%) rotate(var(--r));
     z-index: -3;
   }
 }
 @keyframes slide-last {
-  0%, 100%, 90.01% {
+  0%,
+  100%,
+  90.01% {
     transform: translateX(0%) rotate(var(--r));
     z-index: 3;
   }
@@ -290,7 +294,8 @@ visibility: hidden;
     transform: translateX(120%) rotate(var(--r));
     z-index: -3;
   }
-  20%, 90% {
+  20%,
+  90% {
     transform: translateX(0%) rotate(var(--r));
     z-index: -3;
   }

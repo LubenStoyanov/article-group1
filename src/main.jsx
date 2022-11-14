@@ -4,12 +4,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Nizami from "./components/Nizami";
-import Kingsley from "./components/Kingsley";
+// import Nizami from "./routes/Nizami";
+import ArticleHTML from "./routes/ArticleHTML";
 import WordPress from "./routes/WordPress";
 import MongoDB from "./routes/MongoDB";
 import Express from "./routes/Express";
 import "./index.css";
+import "./App2.css";
+import "./Html.css";
+import "./assets/ReactArticle/ReactArticle.css";
+import ReactArticle from "./assets/ReactArticle/ReactArticle";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +21,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/nizami",
-    element: <Nizami />,
+    path: "/reactarticle",
+    element: <ReactArticle />,
   },
   {
     path: "/mongodb",
     element: <MongoDB />,
   },
   {
-    path: "/kingsley",
-    element: <Kingsley />,
+    path: "/articlehtml",
+    element: <ArticleHTML />,
   },
   {
     path: "/wordpress",
