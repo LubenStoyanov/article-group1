@@ -1,34 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {
+  Box,
+  Button,
+  Center,
+  Heading,
+  Flex,
+  Spacer,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+  StackDivider,
+} from "@chakra-ui/react";
+import { Transition } from "react-transition-group";
+import { Link } from "react-router-dom";
+import "./App.css";
+
+import { useEffect, useRef, useState } from "react";
+
+const duration = 500;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 1 },
+  entered: { opacity: 1 },
+  exiting: { opacity: 0 },
+  exited: { opacity: 0 },
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [inProp, setInProp] = useState(false);
+  const nodeRef = useRef(null);
 
+  useEffect(() => {
+    setInProp(true);
+  }, []);
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Flex flexDir="column" className="App" gap={10} color="gray.700">
+      <VStack gap={5}>
+        <Heading as="h1" size="4xl">
+          DevPub
+        </Heading>
+        <Text fontSize="2xl">Get the latest news of the tech world.</Text>
+      </VStack>
+      <Spacer />
+      <Transition nodeRef={nodeRef} in={inProp} timeout={duration}>
+        {(state) => (
+          <Wrap
+            justify="center"
+            ref={nodeRef}
+            style={{
+              ...defaultStyle,
+              ...transitionStyles[state],
+            }}
+          >
+            <WrapItem>
+              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
+                <Heading as="h2" mt={14} size="2xl">
+                  Article
+                </Heading>
+                <Link to={`/bruno`}>
+                  <Button size="lg">Read</Button>
+                </Link>
+              </VStack>
+            </WrapItem>
+            <WrapItem>
+              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
+                <Heading as="h2" mt={14} size="2xl">
+                  Article
+                </Heading>
+                <Link to={`/bruno`}>
+                  <Button size="lg">Read</Button>
+                </Link>
+              </VStack>
+            </WrapItem>
+            <WrapItem>
+              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
+                <Heading as="h2" mt={14} size="2xl">
+                  Article
+                </Heading>
+                <Link to={`/bruno`}>
+                  <Button size="lg">Read</Button>
+                </Link>
+              </VStack>
+            </WrapItem>
+            <WrapItem>
+              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
+                <Heading as="h2" mt={14} size="2xl">
+                  Article
+                </Heading>
+                <Link to={`/bruno`}>
+                  <Button size="lg">Read</Button>
+                </Link>
+              </VStack>
+            </WrapItem>
+          </Wrap>
+        )}
+      </Transition>
+    </Flex>
+  );
 }
 
-export default App
+export default App;
