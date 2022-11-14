@@ -1,3 +1,7 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import '../src/assets/ReactArticle/ReactArticle.css'
 import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";

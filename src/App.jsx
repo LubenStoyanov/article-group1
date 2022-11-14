@@ -1,3 +1,8 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import ReactArticle from './assets/ReactArticle/ReactArticle'
+import Main from './assets/ReactArticle/Main'
+import Carousel from './assets/ReactArticle/Carousel'
 
 import {
   Box,
@@ -42,6 +47,7 @@ function App() {
     setInProp(true);
   }, []);
   return (
+
     <Flex
       flexDir="column"
       className="App"
