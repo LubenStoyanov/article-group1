@@ -11,11 +11,11 @@ import {
   WrapItem,
   StackDivider,
   Divider,
+  Container,
 } from "@chakra-ui/react";
 import { Transition } from "react-transition-group";
 import { Link } from "react-router-dom";
 import Article from "./components/Article";
-import "./App.css";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -41,15 +41,23 @@ function App() {
     setInProp(true);
   }, []);
   return (
-    <main>
-      <Flex flexDir="column" className="App" gap={10} color="gray.700">
+    <Flex
+      flexDir="column"
+      className="App"
+      gap={10}
+      color="gray.200"
+      as="main"
+      height="100vh"
+      bg="blue.800"
+    >
+      <Container maxWidth="120ch">
         <VStack gap={5}>
           <Heading as="h1" size="4xl">
             DevPub
           </Heading>
           <Text fontSize="2xl">Get the latest news of the tech world.</Text>
         </VStack>
-        <Divider orientation="horizontal" />
+        <Divider orientation="horizontal" my={10} />
         <Transition nodeRef={nodeRef} in={inProp} timeout={duration}>
           {(state) => (
             <Wrap
@@ -61,7 +69,7 @@ function App() {
               }}
             >
               <WrapItem>
-                <Article title={""} />
+                <Article title={"Kingsley"} />
               </WrapItem>
               <WrapItem>
                 <Article title={""} />
@@ -71,12 +79,15 @@ function App() {
               </WrapItem>
               <WrapItem>
                 <Article title={""} />
+              </WrapItem>
+              <WrapItem>
+                <Article title={"Luben"} />
               </WrapItem>
             </Wrap>
           )}
         </Transition>
-      </Flex>
-    </main>
+      </Container>
+    </Flex>
   );
 }
 

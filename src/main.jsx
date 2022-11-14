@@ -7,7 +7,7 @@ import Nizami from "./components/Nizami";
 import Kingsley from "./components/Kingsley";
 import Tobias from "./components/Tobias";
 import Bruno from "./components/Bruno";
-import "./index.css";
+import Luben from "./components/Luben";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/tobias",
     element: <Tobias />,
+  },
+  {
+    path: "/luben",
+    element: <Luben />,
   },
 ]);
 
