@@ -10,9 +10,11 @@ import {
   Wrap,
   WrapItem,
   StackDivider,
+  Divider,
 } from "@chakra-ui/react";
 import { Transition } from "react-transition-group";
 import { Link } from "react-router-dom";
+import Article from "./components/Article";
 import "./App.css";
 
 import { useEffect, useRef, useState } from "react";
@@ -39,68 +41,42 @@ function App() {
     setInProp(true);
   }, []);
   return (
-    <Flex flexDir="column" className="App" gap={10} color="gray.700">
-      <VStack gap={5}>
-        <Heading as="h1" size="4xl">
-          DevPub
-        </Heading>
-        <Text fontSize="2xl">Get the latest news of the tech world.</Text>
-      </VStack>
-      <Spacer />
-      <Transition nodeRef={nodeRef} in={inProp} timeout={duration}>
-        {(state) => (
-          <Wrap
-            justify="center"
-            ref={nodeRef}
-            style={{
-              ...defaultStyle,
-              ...transitionStyles[state],
-            }}
-          >
-            <WrapItem>
-              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
-                <Heading as="h2" mt={14} size="2xl">
-                  Article
-                </Heading>
-                <Link to={`/bruno`}>
-                  <Button size="lg">Read</Button>
-                </Link>
-              </VStack>
-            </WrapItem>
-            <WrapItem>
-              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
-                <Heading as="h2" mt={14} size="2xl">
-                  Article
-                </Heading>
-                <Link to={`/bruno`}>
-                  <Button size="lg">Read</Button>
-                </Link>
-              </VStack>
-            </WrapItem>
-            <WrapItem>
-              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
-                <Heading as="h2" mt={14} size="2xl">
-                  Article
-                </Heading>
-                <Link to={`/bruno`}>
-                  <Button size="lg">Read</Button>
-                </Link>
-              </VStack>
-            </WrapItem>
-            <WrapItem>
-              <VStack w="xs" h="xs" bg="blue.200" spacing="20" align="center">
-                <Heading as="h2" mt={14} size="2xl">
-                  Article
-                </Heading>
-                <Link to={`/bruno`}>
-                  <Button size="lg">Read</Button>
-                </Link>
-              </VStack>
-            </WrapItem>
-          </Wrap>
-        )}
-      </Transition>
-    </Flex>
+    <main>
+      <Flex flexDir="column" className="App" gap={10} color="gray.700">
+        <VStack gap={5}>
+          <Heading as="h1" size="4xl">
+            DevPub
+          </Heading>
+          <Text fontSize="2xl">Get the latest news of the tech world.</Text>
+        </VStack>
+        <Divider orientation="horizontal" />
+        <Transition nodeRef={nodeRef} in={inProp} timeout={duration}>
+          {(state) => (
+            <Wrap
+              justify="center"
+              ref={nodeRef}
+              style={{
+                ...defaultStyle,
+                ...transitionStyles[state],
+              }}
+            >
+              <WrapItem>
+                <Article title={""} />
+              </WrapItem>
+              <WrapItem>
+                <Article title={""} />
+              </WrapItem>
+              <WrapItem>
+                <Article title={""} />
+              </WrapItem>
+              <WrapItem>
+                <Article title={""} />
+              </WrapItem>
+            </Wrap>
+          )}
+        </Transition>
+      </Flex>
+    </main>
   );
 }
 
